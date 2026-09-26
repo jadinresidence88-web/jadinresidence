@@ -14,10 +14,23 @@
         header { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.95); padding:1rem; border-bottom:1px solid #E5E7EB; z-index:100; text-align:center; }
         header a { font-size:1.2rem; font-weight:700; color:var(--primary); text-decoration:none; }
 
-        /* Hero dengan Gambar Kamar Asli */
-        .hero { min-height:70vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:6rem 1rem 2rem; background:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)), url('https://i.postimg.cc/NKFT4M0z/Kamar.jpg') center/cover no-repeat; color:#fff; }
-        .hero h1 { font-size:2rem; margin-bottom:0.5rem; }
-        .hero p { margin-bottom:1.5rem; opacity:0.9; }
+        /* Hero dengan Gambar Kamar Utama (Latar Belakang Disesuaikan Agar Tidak Pecah) */
+        .hero { 
+            min-height:75vh; 
+            display:flex; 
+            flex-direction:column; 
+            justify-content:center; 
+            align-items:center; 
+            text-align:center; 
+            padding:6rem 1rem 2rem; 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://i.postimg.cc/NKFT4M0z/Kamar.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color:#fff; 
+        }
+        .hero h1 { font-size:2.2rem; margin-bottom:0.5rem; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+        .hero p { margin-bottom:1.5rem; opacity:0.95; font-size:1.1rem; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
 
         /* Buttons */
         .btn { display:inline-block; padding:0.75rem 1.5rem; background:#25D366; color:#fff; text-decoration:none; border-radius:8px; font-weight:600; }
@@ -27,11 +40,18 @@
         .container { max-width:900px; margin:0 auto; padding:3rem 1rem; }
         h2 { text-align:center; color:var(--primary); margin-bottom:1.5rem; }
 
-        /* Grid Layout */
-        .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:1.5rem; }
-        .card { background:#fff; padding:1.25rem; border-radius:12px; border:1px solid #E5E7EB; text-align:center; }
-        .card img { width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:1rem; }
-        .price { font-weight:700; color:var(--primary); margin:0.5rem 0 1rem; }
+        /* Grid Layout & Image Optimization */
+        .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.5rem; }
+        .card { background:#fff; padding:1.25rem; border-radius:12px; border:1px solid #E5E7EB; text-align:center; overflow:hidden; }
+        .card img { 
+            width:100%; 
+            height:220px; 
+            object-fit:cover; 
+            object-position:center;
+            border-radius:8px; 
+            margin-bottom:1rem; 
+        }
+        .price { font-weight:700; color:var(--primary); margin:0.5rem 0 1rem; font-size:1.1rem; }
 
         /* Map & Footer */
         iframe { width:100%; height:250px; border:0; border-radius:12px; margin-top:1rem; }
@@ -47,7 +67,7 @@
     <section class="hero">
         <h1>Jadin Residence Bali</h1>
         <p>Hunian nyaman, tenang, dan strategis di Denpasar Barat.</p>
-        <a href="https://wa.me/6285100055538?text=Halo%20Jadin%20Residence,%20saya%20ingin%20tanya%20ketersediaan%20kamar" target="_blank" class="btn">Hubungi via WhatsApp</a>
+        <a href="https://wa.me/6285100055538" target="_blank" class="btn">Hubungi via WhatsApp</a>
     </section>
 
     <!-- Fasilitas -->
@@ -70,14 +90,14 @@
                 <h3>Deluxe Room</h3>
                 <p>Kasur Nyaman, Full AC, Meja Kerja, Kamar Mandi Dalam.</p>
                 <div class="price">Rp 350.000 / malam</div>
-                <a href="https://wa.me/6285100055538?text=Halo,%20saya%20pesan%20Deluxe%20Room" target="_blank" class="btn btn-primary">Pesan Kamar</a>
+                <a href="https://wa.me/6285100055538?text=Halo%20Jadin%20Residence,%20saya%20ingin%20pesan%20Deluxe%20Room" target="_blank" class="btn btn-primary">Pesan Kamar</a>
             </div>
             <div class="card">
                 <img src="https://i.postimg.cc/4Yyt5d3L/Dapur.jpg" alt="Executive Room Jadin Residence">
                 <h3>Executive Room</h3>
                 <p>Fasilitas Lengkap dengan Akses Area Dapur Bersih & Nyaman.</p>
                 <div class="price">Rp 550.000 / malam</div>
-                <a href="https://wa.me/6285100055538?text=Halo,%20saya%20pesan%20Executive%20Room" target="_blank" class="btn btn-primary">Pesan Kamar</a>
+                <a href="https://wa.me/6285100055538?text=Halo%20Jadin%20Residence,%20saya%20ingin%20pesan%20Executive%20Room" target="_blank" class="btn btn-primary">Pesan Kamar</a>
             </div>
         </div>
     </div>
