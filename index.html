@@ -3,456 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jadin Residence | Hunian Nyaman & Modern di Denpasar Bali</title>
-    <meta name="description" content="Jadin Residence menyediakan hunian nyaman, modern, dan strategis di Denpasar Barat, Bali dengan fasilitas lengkap serta suasana yang tenang.">
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Schema.org JSON-LD (SEO Local Business / Lodging) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LodgingBusiness",
-      "name": "Jadin Residence",
-      "image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
-      "url": "https://jadinresidence88-web.github.io/jadinresidence/",
-      "telephone": "+6285100055538",
-      "priceRange": "$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Jalan Kebaksari no 88X, Pemecutan Klod",
-        "addressLocality": "Kec. Denpasar Barat, Kota Denpasar",
-        "addressRegion": "Bali",
-        "postalCode": "80119",
-        "addressCountry": "ID"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -8.6743,
-        "longitude": 115.1929
-      },
-      "amenityFeature": [
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Free Wi-Fi",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Air Conditioning",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Swimming Pool",
-          "value": true
-        },
-        {
-          "@type": "LocationFeatureSpecification",
-          "name": "Free Parking",
-          "value": true
-        }
-      ]
-    }
-    </script>
-
+    <title>Jadin Residence | Denpasar Bali</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #2C5E3B; /* Hijau Elegan khas Bali */
-            --primary-hover: #21472C;
-            --secondary: #D4A373; /* Warna aksen warm kayu/tropis */
-            --text-dark: #1F2937;
-            --text-muted: #6B7280;
-            --bg-light: #F9FAFB;
-            --white: #FFFFFF;
-            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            --radius: 12px;
-        }
+        :root { --primary: #2C5E3B; --bg: #F9FAFB; --dark: #1F2937; }
+        * { margin:0; padding:0; box-sizing:border-box; font-family:'Plus Jakarta Sans',sans-serif; scroll-behavior:smooth; }
+        body { background: var(--bg); color: var(--dark); line-height: 1.5; }
+        
+        /* Header */
+        header { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.95); padding:1rem; border-bottom:1px solid #E5E7EB; z-index:100; text-align:center; }
+        header a { font-size:1.2rem; font-weight:700; color:var(--primary); text-decoration:none; }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            scroll-behavior: smooth;
-        }
+        /* Hero dengan Gambar Kamar Asli */
+        .hero { min-height:70vh; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:6rem 1rem 2rem; background:linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)), url('https://i.postimg.cc/NKFT4M0z/Kamar.jpg') center/cover no-repeat; color:#fff; }
+        .hero h1 { font-size:2rem; margin-bottom:0.5rem; }
+        .hero p { margin-bottom:1.5rem; opacity:0.9; }
 
-        body {
-            background-color: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
+        /* Buttons */
+        .btn { display:inline-block; padding:0.75rem 1.5rem; background:#25D366; color:#fff; text-decoration:none; border-radius:8px; font-weight:600; }
+        .btn-primary { background:var(--primary); }
 
-        /* Header / Navbar */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(8px);
-            z-index: 1000;
-            border-bottom: 1px solid #E5E7EB;
-        }
+        /* Container & Sections */
+        .container { max-width:900px; margin:0 auto; padding:3rem 1rem; }
+        h2 { text-align:center; color:var(--primary); margin-bottom:1.5rem; }
 
-        .nav-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 1.5rem;
-        }
+        /* Grid Layout */
+        .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:1.5rem; }
+        .card { background:#fff; padding:1.25rem; border-radius:12px; border:1px solid #E5E7EB; text-align:center; }
+        .card img { width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:1rem; }
+        .price { font-weight:700; color:var(--primary); margin:0.5rem 0 1rem; }
 
-        .logo {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-            letter-spacing: -0.5px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-dark);
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            min-height: 85vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), 
-                        url('https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-            color: var(--white);
-            padding: 6rem 1.5rem 3rem 1.5rem;
-        }
-
-        .hero-content {
-            max-width: 750px;
-        }
-
-        .hero h1 {
-            font-size: 2.75rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.15rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.85rem 1.75rem;
-            background-color: var(--primary);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: var(--radius);
-            font-weight: 600;
-            transition: background 0.3s, transform 0.2s;
-            box-shadow: var(--shadow);
-        }
-
-        .btn:hover {
-            background-color: var(--primary-hover);
-            transform: translateY(-2px);
-        }
-
-        /* Container Sections */
-        .section {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 4.5rem 1.5rem;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-title h2 {
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .section-title p {
-            color: var(--text-muted);
-        }
-
-        /* Amenities Grid */
-        .grid-features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .feature-card {
-            background: var(--white);
-            padding: 1.75rem;
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            text-align: center;
-            border: 1px solid #F3F4F6;
-        }
-
-        .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
-        .feature-card h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .feature-card p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-
-        /* Rooms / Gallery Section */
-        .grid-rooms {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .room-card {
-            background: var(--white);
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            border: 1px solid #F3F4F6;
-        }
-
-        .room-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-
-        .room-info {
-            padding: 1.5rem;
-        }
-
-        .room-info h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .room-info p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            margin-bottom: 1rem;
-        }
-
-        .price {
-            font-weight: 700;
-            color: var(--primary);
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Contact Section */
-        .contact-container {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 2.5rem;
-            box-shadow: var(--shadow);
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
-        .contact-info h3 {
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-
-        .contact-info p {
-            margin-bottom: 0.75rem;
-            color: var(--text-muted);
-        }
-
-        .whatsapp-btn {
-            background-color: #25D366;
-            margin-top: 1rem;
-        }
-
-        .whatsapp-btn:hover {
-            background-color: #1EBE5D;
-        }
-
-        .map-placeholder {
-            width: 100%;
-            height: 100%;
-            min-height: 250px;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .map-placeholder iframe {
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #111827;
-            color: #9CA3AF;
-            text-align: center;
-            padding: 2rem 1.5rem;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive Breakpoints */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-
-            .nav-links {
-                display: none;
-            }
-        }
+        /* Map & Footer */
+        iframe { width:100%; height:250px; border:0; border-radius:12px; margin-top:1rem; }
+        footer { background:#111827; color:#9CA3AF; text-align:center; padding:1.5rem; font-size:0.85rem; }
     </style>
 </head>
 <body>
 
-    <!-- Header / Navbar -->
     <header>
-        <div class="nav-container">
-            <a href="#" class="logo">Jadin Residence</a>
-            <ul class="nav-links">
-                <li><a href="#fasilitas">Fasilitas</a></li>
-                <li><a href="#tipe-kamar">Tipe Kamar</a></li>
-                <li><a href="#lokasi">Lokasi & Kontak</a></li>
-            </ul>
-        </div>
+        <a href="#">Jadin Residence</a>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>Kenyamanan Serasa di Rumah di Jantung Denpasar</h1>
-            <p>Hunian eksklusif, tenang, dan modern di Denpasar Barat. Pilihan tepat untuk tempat tinggal harian maupun jangka panjang di Bali.</p>
-            <a href="https://wa.me/6285100055538?text=Halo%20Jadin%20Residence,%20saya%20ingin%20tanya%20ketersediaan%20kamar" target="_blank" class="btn whatsapp-btn">Hubungi via WhatsApp</a>
-        </div>
+        <h1>Jadin Residence Bali</h1>
+        <p>Hunian nyaman, tenang, dan strategis di Denpasar Barat.</p>
+        <a href="https://wa.me/6285100055538?text=Halo%20Jadin%20Residence,%20saya%20ingin%20tanya%20ketersediaan%20kamar" target="_blank" class="btn">Hubungi via WhatsApp</a>
     </section>
 
-    <!-- Fasilitas Section -->
-    <section id="fasilitas" class="section">
-        <div class="section-title">
-            <h2>Fasilitas Utama</h2>
-            <p>Didesain untuk kenyamanan dan produktivitas Anda selama di Bali</p>
+    <!-- Fasilitas -->
+    <div class="container">
+        <h2>Fasilitas Utama</h2>
+        <div class="grid">
+            <div class="card">📶 Wi-Fi Cepat & Stable</div>
+            <div class="card">🍳 Dapur Bersama / Dapur Kamar</div>
+            <div class="card">❄️ Full AC & Water Heater</div>
+            <div class="card">🅿️ Parkir Luas & Safe</div>
         </div>
-        <div class="grid-features">
-            <div class="feature-card">
-                <span class="feature-icon">📶</span>
-                <h3>Wi-Fi Cepat</h3>
-                <p>Koneksi internet stabil, cocok untuk kerja remote atau streaming.</p>
-            </div>
-            <div class="feature-card">
-                <span class="feature-icon">🏊‍♂️</span>
-                <h3>Kolam Renang</h3>
-                <p>Nikmati suasana segar dan tenang di area kolam renang privat.</p>
-            </div>
-            <div class="feature-card">
-                <span class="feature-icon">❄️</span>
-                <h3>Full AC & Water Heater</h3>
-                <p>Kamar ber-AC dingin dengan fasilitas kamar mandi dalam yang nyaman.</p>
-            </div>
-            <div class="feature-card">
-                <span class="feature-icon">🅿️</span>
-                <h3>Parkir Aman</h3>
-                <p>Area parkir luas dan terawasi untuk kendaraan roda dua maupun empat.</p>
-            </div>
-        </div>
-    </section>
+    </div>
 
-    <!-- Tipe Kamar Section -->
-    <section id="tipe-kamar" class="section">
-        <div class="section-title">
-            <h2>Pilihan Kamar</h2>
-            <p>Suasana bersih, tenang, dan tertata rapi</p>
-        </div>
-        <div class="grid-rooms">
-            <div class="room-card">
-                <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=600&q=80" alt="Deluxe Room Jadin Residence">
-                <div class="room-info">
-                    <h3>Deluxe Room</h3>
-                    <p>Fasilitas: Kasur King Size, AC, Smart TV, Meja Kerja, Kamar Mandi Dalam.</p>
-                    <div class="price">Mulai dari Rp 350.000 / malam</div>
-                    <a href="https://wa.me/6285100055538?text=Halo,%20saya%20tertarik%20pesan%20Deluxe%20Room" target="_blank" class="btn">Pesan Kamar</a>
-                </div>
+    <!-- Kamar -->
+    <div class="container">
+        <h2>Pilihan Kamar</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="https://i.postimg.cc/PC7DFjpw/Kamar2.jpg" alt="Deluxe Room Jadin Residence">
+                <h3>Deluxe Room</h3>
+                <p>Kasur Nyaman, Full AC, Meja Kerja, Kamar Mandi Dalam.</p>
+                <div class="price">Rp 350.000 / malam</div>
+                <a href="https://wa.me/6285100055538?text=Halo,%20saya%20pesan%20Deluxe%20Room" target="_blank" class="btn btn-primary">Pesan Kamar</a>
             </div>
-            <div class="room-card">
-                <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80" alt="Executive Suite Jadin Residence">
-                <div class="room-info">
-                    <h3>Executive Suite</h3>
-                    <p>Ukuran kamar lebih luas dilengkapi dengan dapur kecil (kitchenette) & balkon pribadi.</p>
-                    <div class="price">Mulai dari Rp 550.000 / malam</div>
-                    <a href="https://wa.me/6285100055538?text=Halo,%20saya%20tertarik%20pesan%20Executive%20Suite" target="_blank" class="btn">Pesan Kamar</a>
-                </div>
+            <div class="card">
+                <img src="https://i.postimg.cc/4Yyt5d3L/Dapur.jpg" alt="Executive Room Jadin Residence">
+                <h3>Executive Room</h3>
+                <p>Fasilitas Lengkap dengan Akses Area Dapur Bersih & Nyaman.</p>
+                <div class="price">Rp 550.000 / malam</div>
+                <a href="https://wa.me/6285100055538?text=Halo,%20saya%20pesan%20Executive%20Room" target="_blank" class="btn btn-primary">Pesan Kamar</a>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Lokasi & Kontak Section -->
-    <section id="lokasi" class="section">
-        <div class="section-title">
-            <h2>Lokasi & Informasi</h2>
-            <p>Akses mudah ke pusat kota, tempat wisata, dan fasilitas umum</p>
+    <!-- Lokasi -->
+    <div class="container">
+        <h2>Lokasi & Kontak</h2>
+        <div class="card" style="text-align: left;">
+            <p>📍 <strong>Alamat:</strong> Jl. Kebaksari No. 88X, Pemecutan Klod, Denpasar Barat, Bali 80119</p>
+            <p>📞 <strong>WA:</strong> +62 851-0005-5538</p>
+            <p style="margin-top: 1rem;"><a href="https://wa.me/6285100055538" target="_blank" class="btn">Chat WhatsApp</a></p>
+            <iframe src="https://maps.google.com/maps?q=-8.6743,115.1929&hl=id&z=17&output=embed" loading="lazy"></iframe>
         </div>
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Jadin Residence</h3>
-                <p>📍 <strong>Alamat:</strong> Jalan Kebaksari no 88X, Pemecutan Klod, Kec. Denpasar Barat, Kota Denpasar, Bali 80119</p>
-                <p>📍 <strong>Plus Code:</strong> 857R+74 Pemecutan Klod, Denpasar</p>
-                <p>📞 <strong>Telepon/WA:</strong> +62 851-0005-5538</p>
-                <p>⏰ <strong>Jam Operational / Check-in:</strong> 14:00 WITA</p>
-                
-                <a href="https://wa.me/6285100055538?text=Halo%20Jadin%20Residence" target="_blank" class="btn whatsapp-btn">Chat WhatsApp Langsung</a>
-            </div>
-            <div class="map-placeholder">
-                <iframe src="https://maps.google.com/maps?q=-8.6743,115.1929&hl=id&z=17&output=embed" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
-    </section>
+    </div>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Jadin Residence Bali. All Rights Reserved.</p>
+        <p>&copy; 2026 Jadin Residence Bali.</p>
     </footer>
 
 </body>
